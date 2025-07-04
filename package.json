@@ -4,14 +4,17 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node -r ts-node/register --env-file=.env src/index.ts"
+		"start": "node -r ts-node/register --env-file=.env src/index.ts",
+		"hf:transformers": "node -r ts-node/register --env-file=.env src/transformers.ts"
 	},
 	"keywords": [],
 	"author": "Narayan Maaity",
 	"license": "ISC",
 	"type": "commonjs",
 	"dependencies": {
-		"@huggingface/inference": "^4.3.1"
+		"@huggingface/inference": "^4.3.1",
+		"@huggingface/transformers": "^3.6.1",
+		"wavefile": "^11.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^24.0.10",
