@@ -11,4 +11,26 @@ async function embed() {
 	console.log(output);
 }
 
-embed();
+async function translate() {
+	const result = await inference.translation({
+		inputs: 'How is the weather in Paris?',
+		model: 'google-t5/t5-base',
+	});
+
+	console.log(result);
+}
+
+async function answerQuestion() {
+	const result = await inference.questionAnswering({
+		inputs: {
+			context: 'The quick brown fox jumps over the lazy dog',
+			question: 'What color is the dog?',
+		},
+		model: 'distilbert-base-cased-distilled-squad',
+	});
+	console.log(result);
+}
+
+// embed()
+// translate();
+answerQuestion();
