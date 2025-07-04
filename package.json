@@ -1,13 +1,21 @@
 {
-  "name": "huggingface",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+	"name": "huggingface",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node -r ts-node/register --env-file=.env src/index.ts"
+	},
+	"keywords": [],
+	"author": "Narayan Maaity",
+	"license": "ISC",
+	"type": "commonjs",
+	"dependencies": {
+		"@huggingface/inference": "^4.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "^24.0.10",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	}
 }
